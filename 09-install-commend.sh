@@ -8,7 +8,7 @@ else
     echo "Sucess :: you are running the script with sudo or root user access"
 fi
 
-dnf module list mysql-server -y
+dnf list installed  mysql
 dnf install mysql-server -y
 
 if [ $? -eq 0 ]
