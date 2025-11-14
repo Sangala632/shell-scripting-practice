@@ -9,12 +9,18 @@ else
 fi
 
 dnf list installed  mysql
-dnf install mysql-server -y
 
+if [ $? -ne 0 ]
+then
+    echo "Mysql is not installed... going to  install"
+    dnf install mysql -y
 if [ $? -eq 0 ]
 then
-    echo "Mysql server installed successfully"
+    echo "installing the mysql server is sucess"
     else
     echo "Error :: Mysql server installation failed"
     exit 1
+fi
+else 
+    echo "my sql is alerady installed in the syatem.. nothing to do
 fi
