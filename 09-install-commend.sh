@@ -6,6 +6,7 @@ then
 exit 1
 else 
     echo "Sucess :: you are running the script with sudo or root user access"
+fi
 
 dnf install mysql-server -y
 
